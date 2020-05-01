@@ -29,12 +29,15 @@
 """
 
 import sys
-
+import six
 from datetime import datetime
+
 
 if sys.version_info[0] == 3:
     basestring = str
 
+if six.PY3:
+    unicode = str
 
 XHTML_NAMESPACE = 'http://www.w3.org/1999/xhtml'
 
